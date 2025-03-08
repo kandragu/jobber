@@ -13,8 +13,9 @@ import { UsersModule } from './users/users.module';
     PrismaModule,
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      useGlobalPrefix: true,
+      useGlobalPrefix: false,
       autoSchemaFile: true,
+      playground: true,
       context: ({ req, res }) => ({ req, res }),
     }),
     UsersModule,
