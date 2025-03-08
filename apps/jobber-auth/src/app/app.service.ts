@@ -4,10 +4,10 @@ import { PrismaService } from './prisma/prisma.service';
 
 @Injectable()
 export class AppService {
-  constructor(private readonly prismaSerice: PrismaService) {}
+  // constructor(private readonly prismaSerice: PrismaService) {}
 
-  async getData(): Promise<{ message: string; count: number }> {
-    const count = await this.prismaSerice.user.count();
-    return { message: 'Hello API', count };
+  getData(): { message: string } {
+    // const count = await this.prismaSerice.user.count();
+    return { message: 'Hello API' };
   }
 }

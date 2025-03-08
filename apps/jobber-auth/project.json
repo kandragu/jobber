@@ -18,6 +18,7 @@
         }
       }
     },
+
     "serve": {
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
@@ -49,6 +50,7 @@
       }
     },
     "test": {
+      "dependsOn": ["generate-prisma"],
       "options": {
         "passWithNoTests": true
       }
