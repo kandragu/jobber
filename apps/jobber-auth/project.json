@@ -40,8 +40,10 @@
       "command": "prisma generate",
       "options": {
         "cwd": "{projectRoot}",
+        "inputs": ["prisma/schema.prisma"],
         "command": "apps/jobber-auth"
-      }
+      },
+      "cache": true
     },
     "migrate-prisma": {
       "command": "prisma migrate dev",
